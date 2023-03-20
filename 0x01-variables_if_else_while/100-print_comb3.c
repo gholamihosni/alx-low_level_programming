@@ -3,13 +3,13 @@
 /**
  * main - main function to print combination of two numbers
  *
- * Returns: always 0 on success
+ * Returns: 0 on success
  */
 
 int main(void)
 {
-	int i;
-	int j;
+	int i = '0';
+	int j = '0';
 
 	while (i <= '9')
 	{
