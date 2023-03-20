@@ -1,38 +1,32 @@
 #include <stdio.h>
 
 /**
- * main - main function to print combination of two numbers
+ * main - main function
  *
- * Returns: 0 on success
+ * Return: always 0
  */
 
 int main(void)
 {
-	int i = '0';
-	int j = '0';
+	int i;
+	int j;
 
-	while (i <= '9')
+	for (i = 0 ; i < 10 ; i++)
 	{
-		while (j <= '9')
+		for (j = 1 ; j < 10 ; j++)
 		{
-			if (!(i > j) || i == j)
+			if (i < j && i != j)
 			{
-				putchar(i);
-				putchar(j);
-				if (i == '8' && j == '9')
-				{
-					putchar('\n');
-				}
-				else
+				putchar(i + '0');
+				putchar(j + '0');
+				if (i + j != 17)
 				{
 					putchar(',');
 					putchar(' ');
 				}
 			}
-			j++;
 		}
-		j = '0';
-		i++;
 	}
-return (0);
+	putchar('\n');
+	return (0);
 }
